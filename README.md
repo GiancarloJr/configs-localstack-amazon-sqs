@@ -36,7 +36,7 @@ ENVIANDO OBJETOS PARA FILA SQS - METODO JAVA
 
 RECEBER MESSAGE DA FILA - METODO JAVA
 
-public ReceiveMessageResponse receberFiladeClientesClassificados() {
+        public ReceiveMessageResponse receberFiladeClientesClassificados() {
         
         SqsClient client = SqsClient.builder()
                 .region(Region.US_EAST_1)
@@ -56,7 +56,7 @@ public ReceiveMessageResponse receberFiladeClientesClassificados() {
 
 PEGANDO A MESSAGE DA FILA E CONVERTER NO OBJETO (CONVERTENDO JSON PARA OBJETO USANDO gson.fromJson) - METODO JAVA
 
-public List<ClientDTO> receberListaDeClientesClassificadosDaFila() {
+        public List<ClientDTO> receberListaDeClientesClassificadosDaFila() {
 
         List<ClientDTO> listClientesClassificadosNaFila = new ArrayList<>();
         Type founderListType = new TypeToken<ArrayList<ClientDTO>>() {
@@ -75,7 +75,7 @@ public List<ClientDTO> receberListaDeClientesClassificadosDaFila() {
 
 COMO A FILA SQS NÃO É APAGADA AO CONSUMIR UTILIZAR METODO PARA APAGAR - JAVA SQS
 
-public void apagarFilaClientesClassificados() {
+        public void apagarFilaClientesClassificados() {
 
         SqsClient client = SqsClient.builder()
                 .region(Region.US_EAST_1)
