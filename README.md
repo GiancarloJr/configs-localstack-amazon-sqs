@@ -16,6 +16,7 @@ aws --endpoint=http://localhost:9324/ sqs list-queues
 
 ENVIANDO OBJETOS PARA FILA SQS - METODO JAVA
 
+
 public void enviarClienteComClassificacaoFaixaRentabilidade(List<ClientDTO> list) {
 
         String listToJson = gson.toJson(list);
