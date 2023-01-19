@@ -18,7 +18,6 @@ ENVIANDO OBJETOS PARA FILA SQS - METODO JAVA
 
 
 public void enviarClienteComClassificacaoFaixaRentabilidade(List<ClientDTO> list) {
-
         String listToJson = gson.toJson(list);
 
         SqsClient client = SqsClient.builder()
@@ -37,7 +36,6 @@ public void enviarClienteComClassificacaoFaixaRentabilidade(List<ClientDTO> list
 RECEBER MESSAGE DA FILA - METODO JAVA
 
 public ReceiveMessageResponse receberFiladeClientesClassificados() {
-
         SqsClient client = SqsClient.builder()
                 .region(Region.US_EAST_1)
                 .endpointOverride(URI.create("http://localhost:9324"))
