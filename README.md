@@ -7,9 +7,13 @@ DOCKER COMPOSE CONTAINER:
 version: '3'
 
    services:
+   
       sqs:
+      
      image: roribio16/alpine-sqs:latest
+     
      ports:
+     
        - "9324:9324"
        - "9325:9325"
 
